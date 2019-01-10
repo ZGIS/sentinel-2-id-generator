@@ -1,1 +1,1 @@
-# nunsuid-corrector
+# sentinel-2-id-generator
