@@ -20,6 +20,10 @@ When they have:
 
 It should be reflected that an image is a sub-set or partially identical with another image.
 
+## Image footprints
+
+It should be reflected in the id that two images have the same footprint, but were acquired at different times.
+
 ## Image versions
 
 Images might be re-processed by ESA using a different software version. The version should be reflected in the id.
