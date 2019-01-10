@@ -2,9 +2,9 @@
 
 ## Problem
 
-There is no unique universal identifier (uuid) for Sentinel data, which is valid across all data hubs and unique for the individual images. Even within a data hub (e.g. the Copernicus Open Data Hube) the same image might have different uuids.
+There is no unique universal identifier (uuid) for Sentinel data, which is valid across all data hubs and are unique for the distinct images. Even within a data hub (e.g. the Copernicus Open Data Hub) the same image might have different uuids.
 
-To have a clean database in the EO-Compass and the data cubes, we need an id generator which generates reliably identical ids for identical images and distinct ids for distinct images.
+To have a clean database in the EO-Compass and the data cubes, we need an id generator which generates reliably identical ids for identical images and distinct ids for distinct images. In this way, a UNIQUE constraint in the metadata table is able to prevents duplicate entries. The semantics of what identical images are is not the job of the database.
 
 ## Identical images 
 
