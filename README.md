@@ -16,6 +16,10 @@ When they have:
 - the same footprint
 - ... tbd
 
+## Image sub-sets and partially identical images
+
+It should be reflected that an image is a sub-set or partially identical with another image.
+
 ## Image versions
 
 Images might be re-processed by ESA using a different software version. The version should be reflected in the id.
