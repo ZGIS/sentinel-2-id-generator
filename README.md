@@ -1,4 +1,5 @@
-# sentinel-2-id-generator
+
+# Sentinel 2 id generator
 
 ## Problem
 
@@ -27,3 +28,10 @@ It should be reflected in the id that two images have the same footprint, but we
 ## Image versions
 
 Images might be re-processed by ESA using a different software version. The version should be reflected in the id.
+
+
+## Example / general pattern
+
+> {instrument}-{platform}-{processinglevel}-{...?}
+>
+> MSI-A-1C-...?
