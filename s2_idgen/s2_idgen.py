@@ -10,18 +10,11 @@ class Generator:
         :param granule_id: string (formatted as Txxxxx, e.g 'T33UVP')
         :param acquisition_time: string (formatted as YYYYMMDDHHMMSS, e.g. '20170105T013442')
         """
-        #
-        # User lowercase of granule ids
-        #
+
         self.granule_id = self.__checkGranuleId(granule_id)
-        
-        #
-        # convert time string to tuple
-        #
+
         self.acquisition_time = self.__checkTimestamp(acquisition_time)
-        
-        #TODO: Check and sanitize inputs
-    
+
 
     def __checkGranuleId(self, granule_id):
         """
@@ -47,10 +40,7 @@ class Generator:
         if granule_id_candidate[0] != 't':
             raise Exception('Invalid granule id {granule_id}. It need to start with "t", e.g. "T33UVP".'.
                 format(granule_id = granule_id))
-        
-        #
-        # Check several values
-        #               
+                   
         if int(granule_id_candidate[1:2]) < 0 or int(granule_id_candidate[1:2]) > 66:
             raise Exception('Invalid granule id {granule_id}. "T" needs to be followed by exactly two digits, e.g. "T33UVP".'.
                 format(granule_id = granule_id))
