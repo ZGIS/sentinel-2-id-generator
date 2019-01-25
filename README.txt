@@ -4,6 +4,8 @@ https://codecov.io/gh/ZGIS/sentinel-2-id-generator[image:https://codecov.io/gh/Z
 
 == Sentinel 2 id generator
 
+_Disclaimer: This not yet ready-to-use. Seriously … come back later._
+
 == 1. Problem
 
 There is no unique universal identifier (uuid) for Sentinel data, which
@@ -127,3 +129,21 @@ id.getID()
 
 +*Out[1]:*+
 ----'t33uvp-2017-005-01-6'----
+
+== 6. Acknowledgements
+
+This python package is developed with support by the Austrian Research
+Promotion Agency (FFG) under the Austrian Space Application Programme
+(ASAP) within the project http://sen2cube.at[Sen2Cube.at] (project no.:
+866016).
+
+== 7. Contact
+
+If you have any questions or inquiry, please open an issue or contact
+one of:
+
+http://uni-salzburg.at/zgis/tiede[Dr. Dirk Tiede]
+
+http://uni-salzburg.at/zgis/sudmanns[Mr. Martin Sudmanns]
+
+http://uni-salzburg.at/zgis/augustin[Ms. Hannah Augustin]

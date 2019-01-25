@@ -3,6 +3,8 @@
 
 # Sentinel 2 id generator
 
+*Disclaimer: This not yet ready-to-use. Seriously ... come back later.*
+
 ## 1. Problem
 
 There is no unique universal identifier (uuid) for Sentinel data, which is valid across all data hubs and is unique for the distinct images. Even within a data hub (e.g. the Copernicus Open Data Hub) the same image might have different uuids.
@@ -106,3 +108,17 @@ id.getID()
     't33uvp-2017-005-01-6'
 
 
+
+## 6. Acknowledgements
+
+This python package is developed with support by the Austrian Research Promotion Agency (FFG) under the Austrian Space Application Programme (ASAP) within the project [Sen2Cube.at](http://sen2cube.at) (project no.: 866016).
+
+## 7. Contact
+
+If you have any questions or inquiry, please open an issue or contact one of:
+
+[Dr. Dirk Tiede](http://uni-salzburg.at/zgis/tiede)
+
+[Mr. Martin Sudmanns](http://uni-salzburg.at/zgis/sudmanns)
+
+[Ms. Hannah Augustin](http://uni-salzburg.at/zgis/augustin)
