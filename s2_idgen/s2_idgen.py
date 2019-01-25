@@ -40,14 +40,17 @@ class Generator:
         if granule_id_candidate[0] != 't':
             raise Exception('Invalid granule id {granule_id}. It need to start with "t", e.g. "T33UVP".'.
                 format(granule_id = granule_id))
-                   
+
         try:
-            strip_number = int(granule_id_candidate[1:2])
-            if strip_number > 66 or strip_number < 10:
-                raise Exception()
+            strip_number = int(granule_id_candidate[1:3])
         except Exception:
             raise Exception('Invalid granule id {granule_id}. "T" needs to be followed by exactly two digits, e.g. "T33UVP".'.
                 format(granule_id = granule_id))
+
+        if strip_number > 69 or strip_number < 10:
+            raise Exception('Invalid granule id {granule_id}. Strip number needs to be between 10 and 70.'.
+                format(granule_id = granule_id))
+        del strip_number
         
         for char in granule_id_candidate[3:6]:
             if char.isalpha() == False:
