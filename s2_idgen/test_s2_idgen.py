@@ -18,6 +18,7 @@ class TestGenerator2(unittest.TestCase):
         self.assertRaises(Exception,s2_idgen.Generator,granule_id = '33UVVP', acquisition_time = '20170105T013442')
         self.assertRaises(Exception,s2_idgen.Generator,granule_id = 'T33UVVP', acquisition_time = '20170105T013442')
         self.assertRaises(Exception,s2_idgen.Generator,granule_id = 'TXXXXX', acquisition_time = '20170105T013442')
+        self.assertRaises(Exception,s2_idgen.Generator,granule_id = 'T33UV1', acquisition_time = '20170105T013442')
         self.assertRaises(Exception,s2_idgen.Generator,granule_id = 6, acquisition_time = '20170105T013442')
 
     def test_checktimestamp(self):

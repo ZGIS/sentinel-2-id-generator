@@ -41,7 +41,11 @@ class Generator:
             raise Exception('Invalid granule id {granule_id}. It need to start with "t", e.g. "T33UVP".'.
                 format(granule_id = granule_id))
                    
-        if int(granule_id_candidate[1:2]) < 0 or int(granule_id_candidate[1:2]) > 66:
+        try:
+            strip_number = int(granule_id_candidate[1:2])
+            if strip_number > 66:
+                raise Exception()
+        except Exception:
             raise Exception('Invalid granule id {granule_id}. "T" needs to be followed by exactly two digits, e.g. "T33UVP".'.
                 format(granule_id = granule_id))
         
