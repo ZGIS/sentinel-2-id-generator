@@ -43,7 +43,7 @@ class Generator:
                    
         try:
             strip_number = int(granule_id_candidate[1:2])
-            if strip_number > 66:
+            if strip_number > 66 strip_number < 10:
                 raise Exception()
         except Exception:
             raise Exception('Invalid granule id {granule_id}. "T" needs to be followed by exactly two digits, e.g. "T33UVP".'.
