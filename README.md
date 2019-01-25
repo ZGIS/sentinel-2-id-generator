@@ -1,4 +1,6 @@
 
+![](https://travis-ci.org/ZGIS/sentinel-2-id-generator.svg?branch=master) [![codecov](https://codecov.io/gh/ZGIS/sentinel-2-id-generator/branch/master/graph/badge.svg)](https://codecov.io/gh/ZGIS/sentinel-2-id-generator)
+
 # Sentinel 2 id generator
 
 ## 1. Problem
