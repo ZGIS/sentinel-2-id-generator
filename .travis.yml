@@ -3,7 +3,7 @@ python:
   - "3.5"
 install:
   - sudo apt-get update
-  - pip install codecov coverage
+  - pip install codecov coverage dateutil
 script:
   - coverage run -m s2_idgen.test_s2_idgen
 after_success:
