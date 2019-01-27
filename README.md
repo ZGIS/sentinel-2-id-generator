@@ -109,11 +109,42 @@ id.getID()
 
 
 
-## 6. Acknowledgements
+## 6. Development
+
+Clone the repository:
+
+```bash
+git clone https://github.com/ZGIS/sentinel-2-id-generator.git
+```
+
+Change working directory
+
+```bash
+cd sentinel-2-id-generator
+```
+
+Create and activate the conda environment
+
+```bash
+conda evn create -f environment.yml
+activate sentinel-tools
+```
+
+This is made for working with Jupyter Lab. You may want to install the current envionment as kernel:
+
+```bash
+ipython kernel install --user --name=<any_name_for_kernel>
+```
+
+Open Jupyter Lab (and/or perhaps your most favourite python IDE) and have fun!
+
+Do not manually edit the README.md and README.txt as they should be generated from this notebook.
+
+## 7. Acknowledgements
 
 This python package is developed with support by the Austrian Research Promotion Agency (FFG) under the Austrian Space Application Programme (ASAP) within the project [Sen2Cube.at](http://sen2cube.at) (project no.: 866016).
 
-## 7. Contact
+## 8. Contact
 
 If you have any questions or inquiry, please open an issue or contact one of:
 
