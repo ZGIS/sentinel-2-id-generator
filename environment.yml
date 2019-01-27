@@ -4,5 +4,6 @@ channels:
   - conda-forge
 dependencies:
   - codecov
+  - python-dateutil
 
 
