@@ -1,5 +1,5 @@
 
-![](https://travis-ci.org/ZGIS/sentinel-2-id-generator.svg?branch=master) [![codecov](https://codecov.io/gh/ZGIS/sentinel-2-id-generator/branch/master/graph/badge.svg)](https://codecov.io/gh/ZGIS/sentinel-2-id-generator)
+![](https://travis-ci.org/ZGIS/sentinel-2-id-generator.svg?branch=master) [![codecov](https://codecov.io/gh/ZGIS/sentinel-2-id-generator/branch/master/graph/badge.svg)](https://codecov.io/gh/ZGIS/sentinel-2-id-generator) [![Project Status: Concept – Minimal or no implementation has been done yet, or the repository is only intended to be a limited example, demo, or proof-of-concept.](https://www.repostatus.org/badges/latest/concept.svg)](https://www.repostatus.org/#concept)
 
 # Sentinel 2 id generator
 
