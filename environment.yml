@@ -34,5 +34,4 @@ dependencies:
 - wheel=0.32.3=py37_0
 - wincertstore=0.2=py37_0
 - zeromq=4.2.5=he025d50_1
-prefix: C:\Users\b1013586\AppData\Local\Continuum\Miniconda3\envs\sentinel-tools
 
