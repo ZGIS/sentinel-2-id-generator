@@ -1,7 +1,8 @@
 name: sentinel-tools
 channels:
-- defaults
+  - defaults
+  - conda-forge
 dependencies:
-
+  - codecov
 
 
