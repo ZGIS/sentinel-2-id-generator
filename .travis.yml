@@ -1,9 +1,18 @@
 language: python
 python:
-  - "3.5"
+  - "3.7"
 install:
   - sudo apt-get update
-  - pip install codecov coverage python-dateutil
+  - wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O miniconda.sh
+  - bash miniconda.sh -b -p $HOME/miniconda
+  - export PATH="$HOME/miniconda/bin:$PATH"
+  - hash -r
+  - conda config --set always_yes yes --set changeps1 no
+  - conda update -q conda
+  # Useful for debugging any issues with conda
+  - conda info -a
+  - conda env create -f environment.yml
+  - source activate sentinel-tools
 script:
   - coverage run -m s2_idgen.test_s2_idgen
 after_success:
