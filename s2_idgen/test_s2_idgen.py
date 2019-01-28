@@ -1,6 +1,6 @@
 import unittest
 
-from s2_idgen import s2_idgen
+from . import s2_idgen
 
 class TestGenerator(unittest.TestCase):
     
