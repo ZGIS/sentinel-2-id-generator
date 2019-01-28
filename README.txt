@@ -111,7 +111,7 @@ Version 2 might be something like this: >
 Use the package as follows
 
 
-+*In[1]:*+
++*In[2]:*+
 [source, ipython3]
 ----
 #
@@ -131,7 +131,7 @@ id.getID()
 ----
 
 
-+*Out[1]:*+
++*Out[2]:*+
 ----'t33uvp-2017-005-01-6'----
 
 == 6. Development
@@ -154,8 +154,15 @@ Create and activate the conda environment
 
 [source,bash]
 ----
-conda evn create -f environment.yml
+conda env create -f environment.yml
 activate sentinel-tools
+----
+
+You may run the tests to verify that it is working properly
+
+[source,bash]
+----
+coverage run -m s2_idgen.test_s2_idgen
 ----
 
 This is made for working with Jupyter Lab. You may want to install the

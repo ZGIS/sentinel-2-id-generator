@@ -126,8 +126,14 @@ cd sentinel-2-id-generator
 Create and activate the conda environment
 
 ```bash
-conda evn create -f environment.yml
+conda env create -f environment.yml
 activate sentinel-tools
+```
+
+You may run the tests to verify that it is working properly
+
+```bash
+coverage run -m s2_idgen.test_s2_idgen
 ```
 
 This is made for working with Jupyter Lab. You may want to install the current envionment as kernel:
