@@ -51,7 +51,7 @@ class Generator:
             raise Exception('Invalid granule id {granule_id}. Strip number needs to be between 10 and 70.'.
                 format(granule_id = granule_id))
         del strip_number
-        
+
         for char in granule_id_candidate[3:6]:
             if char.isalpha() == False:
                 raise Exception('Invalid granule id {granule_id}. The digits need to be followed by exactly three letters, e.g. "T33UVP".'.
@@ -104,7 +104,7 @@ class Generator:
         acquisitionyear = self.acquisition_time.tm_year
         acquisitiondayofyear = self.acquisition_time.tm_yday
         acquisitionhour = self.acquisition_time.tm_hour
-        acquisitiontime = math.floor(self.acquisition_time.tm_min / 5)
+        acquisitiontime = int(math.floor(self.acquisition_time.tm_min / 5))
         
         return '{granule_id}-{acquisitionyear}-{acquisitiondayofyear}-{acquisitionhour}-{acquisitiontime}'.format(
                         granule_id = self.granule_id,
