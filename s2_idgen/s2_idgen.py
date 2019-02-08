@@ -4,19 +4,25 @@ import math
 
 class Generator:
 
-    def __init__(self, granule_id, acquisition_time):
+    def __init__(self, granule_id, acquisition_time, rel_orbit, version = None):
         """
         Constructor
         :param granule_id: string (formatted as Txxxxx, e.g 'T33UVP')
         :param acquisition_time: string (formatted as YYYYMMDDHHMMSS, e.g. '20170105T013442')
         """
 
-        self.granule_id = self.__checkGranuleId(granule_id)
+        self.granule_id = self._checkGranuleId(granule_id)
 
-        self.acquisition_time = self.__checkTimestamp(acquisition_time)
+        self.acquisition_time = self._checkTimestamp(acquisition_time)
 
+        self.rel_orbit = self._checkRelativeOrbit(rel_orbit)
 
-    def __checkGranuleId(self, granule_id):
+        if version is None:
+            version = 1
+
+        self.version = version
+
+    def _checkGranuleId(self, granule_id):
         """
         Checks whether the value for the granule id is reasonable or not
 
@@ -63,7 +69,7 @@ class Generator:
         return granule_id_candidate
     
 
-    def __checkTimestamp(self, acquisition_time):
+    def _checkTimestamp(self, acquisition_time):
         """
         Checks whether the value for the acquisition time is reasonable or not
 
@@ -95,6 +101,20 @@ class Generator:
         return acquisition_time_candidate
 
 
+    def _checkRelativeOrbit(self, rel_orbit):
+        
+        if rel_orbit is None:
+            raise Exception("Invalid relative orbit, must be integer")
+
+        if type(rel_orbit) != int:
+            raise Exception("Invalid relative orbit: {}. Must be integer".format(rel_orbit))
+
+        if rel_orbit < 1:
+            raise Exception("Invalid relative orbit: {}. Must be larger than 1".format(rel_orbit))
+
+        return rel_orbit
+        
+
     def getID(self):
         """
         getId.
@@ -106,10 +126,11 @@ class Generator:
         acquisitionhour = self.acquisition_time.tm_hour
         acquisitiontime = int(math.floor(self.acquisition_time.tm_min / 5))
         
-        return '{granule_id}-{acquisitionyear}-{acquisitiondayofyear}-{acquisitionhour}-{acquisitiontime}'.format(
+        return '{granule_id}-{rel_orbit}-{acquisitionyear}-{acquisitiondayofyear}-{acquisitionhour}-{acquisitiontime}'.format(
                         granule_id = self.granule_id,
                         acquisitionyear = acquisitionyear,
                         acquisitiondayofyear = '{0:03d}'.format(acquisitiondayofyear),
                         acquisitionhour = '{0:02d}'.format(acquisitionhour),
-                        acquisitiontime = acquisitiontime
+                        acquisitiontime = acquisitiontime,
+                        rel_orbit = '{0:03d}'.format(self.rel_orbit)
                     )
